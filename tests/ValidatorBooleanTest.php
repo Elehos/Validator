@@ -6,7 +6,7 @@
  * Time: 10:40
  */
 
-namespace tests\Web1\Validator;
+namespace Tests\Web1\Validator;
 
 use Web1\Validator\ValidatorBoolean;
 

@@ -59,4 +59,13 @@ class ValidatorString
     {
         return strrpos($string, ' ', 0) === false && strrpos($string, ' ', mb_strlen($string) + 1) == false;
     }
+
+    /**
+     * @param $string
+     * @return bool
+     */
+    public static function stringSpaceIn ($string)
+    {
+        return strpbrk($string, ' ') == false;
+    }
 }
