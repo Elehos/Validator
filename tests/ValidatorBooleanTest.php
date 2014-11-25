@@ -16,6 +16,6 @@ class ValidatorBooleanTest extends \PHPUnit_Framework_TestCase
     {
         $boolean = true;
         $test = ValidatorBoolean::validatorBoolean($boolean);
-        $this->assertEquals($boolean,$test);
+        $this->assertTrue($boolean,$test);
     }
 } 
