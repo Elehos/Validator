@@ -45,7 +45,7 @@
  */
 
 /**
- * Abstract base class for test case classes.
+ * Abstract base class for tests case classes.
  *
  * @category   PHP
  * @package    CodeCoverage

@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a test that printed output.
+ * case of a tests that printed output.
  *
  * @package    PHPUnit
  * @subpackage Framework

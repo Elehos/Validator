@@ -44,7 +44,7 @@
  */
 
 /**
- * An interface to define how a test suite should be loaded.
+ * An interface to define how a tests suite should be loaded.
  *
  * @package    PHPUnit
  * @subpackage Runner

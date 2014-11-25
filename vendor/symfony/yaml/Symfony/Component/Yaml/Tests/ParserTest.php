@@ -58,7 +58,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
                 } else {
                     eval('$expected = '.trim($test['php']).';');
 
-                    $tests[] = array($file, var_export($expected, true), $test['yaml'], $test['test']);
+                    $tests[] = array($file, var_export($expected, true), $test['yaml'], $test['tests']);
                 }
             }
         }
@@ -68,7 +68,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
 
     public function testTabsInYaml()
     {
-        // test tabs in YAML
+        // tests tabs in YAML
         $yamls = array(
             "foo:\n	bar",
             "foo:\n 	bar",
@@ -391,7 +391,7 @@ EOF;
     }
 
     /**
-     * Regression test for issue #7989.
+     * Regression tests for issue #7989.
      *
      * @see https://github.com/symfony/symfony/issues/7989
      */

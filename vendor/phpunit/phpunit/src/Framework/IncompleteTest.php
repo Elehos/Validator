@@ -45,7 +45,7 @@
 
 /**
  * A marker interface for marking any exception/error as result of an unit
- * test as incomplete implementation or currently not implemented.
+ * tests as incomplete implementation or currently not implemented.
  *
  * @package    PHPUnit
  * @subpackage Framework

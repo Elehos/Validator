@@ -30,9 +30,9 @@ class DataProviderFilterTest extends PHPUnit_Framework_TestCase
     public static function falseProvider()
     {
         return array(
-          'false test'=>array(false),
-          'false test 2'=>array(false),
-          'other false test'=>array(false),
+          'false tests'=>array(false),
+          'false tests 2'=>array(false),
+          'other false tests'=>array(false),
           'other false test2'=>array(false)
         );
     }

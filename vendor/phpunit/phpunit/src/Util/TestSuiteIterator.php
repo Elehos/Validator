@@ -44,7 +44,7 @@
  */
 
 /**
- * Iterator for test suites.
+ * Iterator for tests suites.
  *
  * @package    PHPUnit
  * @subpackage Util

@@ -44,7 +44,7 @@
  */
 
 /**
- * Base class for all test runners.
+ * Base class for all tests runners.
  *
  * @package    PHPUnit
  * @subpackage Runner
@@ -170,7 +170,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
 
     /**
      * Override to define how to handle a failed loading of
-     * a test suite.
+     * a tests suite.
      *
      * @param string $message
      */

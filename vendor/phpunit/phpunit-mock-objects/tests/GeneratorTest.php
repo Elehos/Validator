@@ -106,7 +106,7 @@ class Framework_MockObject_GeneratorTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Dataprovider for test "testGetMockForAbstractClassExpectingInvalidArgumentException"
+     * Dataprovider for tests "testGetMockForAbstractClassExpectingInvalidArgumentException"
      */
     public static function getMockForAbstractClassExpectsInvalidArgumentExceptionDataprovider()
     {

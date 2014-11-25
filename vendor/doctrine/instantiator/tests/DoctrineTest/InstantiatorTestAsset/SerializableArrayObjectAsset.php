@@ -24,7 +24,7 @@ use BadMethodCallException;
 use Serializable;
 
 /**
- * Serializable test asset that also extends an internal class
+ * Serializable tests asset that also extends an internal class
  *
  * @author Marco Pivetta <ocramius@gmail.com>
  */

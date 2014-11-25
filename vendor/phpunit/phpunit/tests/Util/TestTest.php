@@ -262,7 +262,7 @@ class Util_TestTest extends PHPUnit_Framework_TestCase
 
     /**
      * @coversNothing
-     * @todo   This test does not really test functionality of PHPUnit_Util_Test
+     * @todo   This tests does not really tests functionality of PHPUnit_Util_Test
      */
     public function testGetProvidedDataRegEx()
     {
@@ -289,7 +289,7 @@ class Util_TestTest extends PHPUnit_Framework_TestCase
 
     /**
      * @covers PHPUnit_Util_Test::getDependencies
-     * @todo   Not sure what this test tests (name is misleading at least)
+     * @todo   Not sure what this tests tests (name is misleading at least)
      */
     public function testParseAnnotation()
     {
@@ -302,7 +302,7 @@ class Util_TestTest extends PHPUnit_Framework_TestCase
     /**
      * @depends Foo
      * @depends ほげ
-     * @todo    Remove fixture from test class
+     * @todo    Remove fixture from tests class
      */
     public function methodForTestParseAnnotation()
     {
@@ -322,7 +322,7 @@ class Util_TestTest extends PHPUnit_Framework_TestCase
     /** @depends Bar */
     public function methodForTestParseAnnotationThatIsOnlyOneLine()
     {
-        // TODO Remove fixture from test class
+        // TODO Remove fixture from tests class
     }
 
     /**

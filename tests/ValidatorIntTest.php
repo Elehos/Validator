@@ -16,13 +16,13 @@ class ValidatorIntTest extends \PHPUnit_Framework_TestCase
     {
         $a = mt_rand(1, 100);
         $test = ValidatorInt::intEqual($a,$a);
-        $this->assertTrue($a,$test);
+        $this->assertTrue($test);
     }
 
     public function testIntInf($a,$b)
     {
         $test = ValidatorInt::intInf($a,$b);
-        $this->assertEquals($a,$b,$test);
+        $this->assertTrue($test);
 
     }
 } 

@@ -48,7 +48,7 @@
  * Provides methods for building expectations without having to resort to
  * instantiating the various matchers manually. These methods also form a
  * more natural way of reading the expectation. This class should be together
- * with the test case PHPUnit_Framework_MockObject_TestCase.
+ * with the tests case PHPUnit_Framework_MockObject_TestCase.
  *
  * @package    PHPUnit_MockObject
  * @author     Sebastian Bergmann <sebastian@phpunit.de>

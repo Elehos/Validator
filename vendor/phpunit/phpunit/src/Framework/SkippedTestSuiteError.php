@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a skipped test suite.
+ * case of a skipped tests suite.
  *
  * @package    PHPUnit
  * @subpackage Framework

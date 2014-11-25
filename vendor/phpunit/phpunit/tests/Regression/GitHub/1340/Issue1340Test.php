@@ -10,13 +10,13 @@ class Issue1340Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Also fails despite no isolation, because a phpt test is executed in
+     * Also fails despite no isolation, because a phpt tests is executed in
      * subprocess on its own.
      */
     public function testLargeStderrOutputDoesNotBlock()
     {
-        // STDERR of a phpt test is not caught/validated at this point, so this
-        // error output does not cause this test to fail.
+        // STDERR of a phpt tests is not caught/validated at this point, so this
+        // error output does not cause this tests to fail.
         // @see https://github.com/sebastianbergmann/phpunit/issues/1169
         error_log("\n" . __FUNCTION__ . ": stderr:" . self::get4KB() . "\n");
         $this->assertTrue(true);

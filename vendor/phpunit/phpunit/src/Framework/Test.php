@@ -57,7 +57,7 @@
 interface PHPUnit_Framework_Test extends Countable
 {
     /**
-     * Runs a test and collects its result in a TestResult instance.
+     * Runs a tests and collects its result in a TestResult instance.
      *
      * @param  PHPUnit_Framework_TestResult $result
      * @return PHPUnit_Framework_TestResult

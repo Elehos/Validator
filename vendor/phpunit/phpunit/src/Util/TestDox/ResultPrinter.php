@@ -172,7 +172,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -187,7 +187,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -203,7 +203,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -239,7 +239,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -281,7 +281,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time
@@ -340,7 +340,7 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
     }
 
     /**
-     * Handler for 'on test' event.
+     * Handler for 'on tests' event.
      *
      * @param string  $name
      * @param boolean $success

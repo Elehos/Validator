@@ -45,7 +45,7 @@
 
 /**
  * A marker interface for marking any exception/error as result of an unit
- * test as risky.
+ * tests as risky.
  *
  * @package    PHPUnit
  * @subpackage Framework

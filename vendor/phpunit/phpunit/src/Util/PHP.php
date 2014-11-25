@@ -70,7 +70,7 @@ abstract class PHPUnit_Util_PHP
     }
 
     /**
-     * Runs a single test in a separate PHP process.
+     * Runs a single tests in a separate PHP process.
      *
      * @param  string                       $job
      * @param  PHPUnit_Framework_Test       $test

@@ -47,8 +47,8 @@
  * A Decorator for Tests.
  *
  * Use TestDecorator as the base class for defining new
- * test decorators. Test decorator subclasses can be introduced
- * to add behaviour before or after a test is run.
+ * tests decorators. Test decorator subclasses can be introduced
+ * to add behaviour before or after a tests is run.
  *
  * @package    PHPUnit
  * @subpackage Extensions
@@ -78,7 +78,7 @@ class PHPUnit_Extensions_TestDecorator extends PHPUnit_Framework_Assert implemen
     }
 
     /**
-     * Returns a string representation of the test.
+     * Returns a string representation of the tests.
      *
      * @return string
      */
@@ -88,7 +88,7 @@ class PHPUnit_Extensions_TestDecorator extends PHPUnit_Framework_Assert implemen
     }
 
     /**
-     * Runs the test and collects the
+     * Runs the tests and collects the
      * result in a TestResult.
      *
      * @param PHPUnit_Framework_TestResult $result
@@ -99,8 +99,8 @@ class PHPUnit_Extensions_TestDecorator extends PHPUnit_Framework_Assert implemen
     }
 
     /**
-     * Counts the number of test cases that
-     * will be run by this test.
+     * Counts the number of tests cases that
+     * will be run by this tests.
      *
      * @return integer
      */
@@ -120,7 +120,7 @@ class PHPUnit_Extensions_TestDecorator extends PHPUnit_Framework_Assert implemen
     }
 
     /**
-     * Returns the test to be run.
+     * Returns the tests to be run.
      *
      * @return PHPUnit_Framework_Test
      */
@@ -130,7 +130,7 @@ class PHPUnit_Extensions_TestDecorator extends PHPUnit_Framework_Assert implemen
     }
 
     /**
-     * Runs the decorated test and collects the
+     * Runs the decorated tests and collects the
      * result in a TestResult.
      *
      * @param  PHPUnit_Framework_TestResult $result

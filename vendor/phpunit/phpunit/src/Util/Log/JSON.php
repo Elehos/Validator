@@ -117,7 +117,7 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
     }
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -137,7 +137,7 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
     }
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -158,7 +158,7 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
     }
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -208,7 +208,7 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
     }
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -221,13 +221,13 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
             array(
             'event' => 'testStart',
             'suite' => $this->currentTestSuiteName,
-            'test'  => $this->currentTestName
+            'tests'  => $this->currentTestName
             )
         );
     }
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time
@@ -255,9 +255,9 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
         }
         $this->write(
             array(
-            'event'   => 'test',
+            'event'   => 'tests',
             'suite'   => $this->currentTestSuiteName,
-            'test'    => $this->currentTestName,
+            'tests'    => $this->currentTestName,
             'status'  => $status,
             'time'    => $time,
             'trace'   => $trace,

@@ -820,7 +820,7 @@ class PHPUnit_Util_Configuration
     }
 
     /**
-     * Returns the test suite configuration.
+     * Returns the tests suite configuration.
      *
      * @return PHPUnit_Framework_TestSuite
      * @since  Method available since Release 3.2.1

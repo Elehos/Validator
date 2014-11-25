@@ -44,7 +44,7 @@
  */
 
 /**
- * The standard test suite loader.
+ * The standard tests suite loader.
  *
  * @package    PHPUnit
  * @subpackage Runner

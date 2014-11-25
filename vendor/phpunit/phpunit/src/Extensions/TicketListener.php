@@ -46,7 +46,7 @@
  */
 
 /**
- * Base class for test listeners that interact with an issue tracker.
+ * Base class for tests listeners that interact with an issue tracker.
  *
  * @package    PHPUnit
  * @subpackage Extensions_TicketListener
@@ -92,7 +92,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * Incomplete test.
+     * Incomplete tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -103,7 +103,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * Risky test.
+     * Risky tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -115,7 +115,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * Skipped test.
+     * Skipped tests.
      *
      * @param PHPUnit_Framework_Test $test
      * @param Exception              $e
@@ -127,7 +127,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * A test suite started.
+     * A tests suite started.
      *
      * @param PHPUnit_Framework_TestSuite $suite
      * @since  Method available since Release 2.2.0
@@ -137,7 +137,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * A test suite ended.
+     * A tests suite ended.
      *
      * @param PHPUnit_Framework_TestSuite $suite
      * @since  Method available since Release 2.2.0
@@ -147,7 +147,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * A test started.
+     * A tests started.
      *
      * @param PHPUnit_Framework_Test $test
      */
@@ -170,7 +170,7 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
     }
 
     /**
-     * A test ended.
+     * A tests ended.
      *
      * @param PHPUnit_Framework_Test $test
      * @param float                  $time
@@ -181,13 +181,13 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
             if ($test->getStatus() == PHPUnit_Runner_BaseTestRunner::STATUS_PASSED) {
                 $ifStatus   = array('assigned', 'new', 'reopened');
                 $newStatus  = 'closed';
-                $message    = 'Automatically closed by PHPUnit (test passed).';
+                $message    = 'Automatically closed by PHPUnit (tests passed).';
                 $resolution = 'fixed';
                 $cumulative = true;
             } elseif ($test->getStatus() == PHPUnit_Runner_BaseTestRunner::STATUS_FAILURE) {
                 $ifStatus   = array('closed');
                 $newStatus  = 'reopened';
-                $message    = 'Automatically reopened by PHPUnit (test failed).';
+                $message    = 'Automatically reopened by PHPUnit (tests failed).';
                 $resolution = '';
                 $cumulative = false;
             } else {
@@ -198,17 +198,17 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
             $tickets = PHPUnit_Util_Test::getTickets(get_class($test), $name);
 
             foreach ($tickets as $ticket) {
-                // Remove this test from the totals (if it passed).
+                // Remove this tests from the totals (if it passed).
                 if ($test->getStatus() == PHPUnit_Runner_BaseTestRunner::STATUS_PASSED) {
                     unset($this->ticketCounts[$ticket][$name]);
                 }
 
                 // Only close tickets if ALL referenced cases pass
-                // but reopen tickets if a single test fails.
+                // but reopen tickets if a single tests fails.
                 if ($cumulative) {
                     // Determine number of to-pass tests:
                     if (count($this->ticketCounts[$ticket]) > 0) {
-                        // There exist remaining test cases with this reference.
+                        // There exist remaining tests cases with this reference.
                         $adjustTicket = false;
                     } else {
                         // No remaining tickets, go ahead and adjust.

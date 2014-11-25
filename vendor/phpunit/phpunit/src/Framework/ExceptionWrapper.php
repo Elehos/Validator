@@ -44,7 +44,7 @@
  */
 
 /**
- * Wraps Exceptions thrown by code under test.
+ * Wraps Exceptions thrown by code under tests.
  *
  * Re-instantiates Exceptions thrown by user-space code to retain their original
  * class names, properties, and stack traces (but without arguments).

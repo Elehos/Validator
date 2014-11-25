@@ -44,7 +44,7 @@
  */
 
 /**
- * A marker interface for marking a unit test as being skipped.
+ * A marker interface for marking a unit tests as being skipped.
  *
  * @package    PHPUnit
  * @subpackage Framework

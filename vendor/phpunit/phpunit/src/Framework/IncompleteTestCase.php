@@ -44,7 +44,7 @@
  */
 
 /**
- * An incomplete test case
+ * An incomplete tests case
  *
  * @package    PHPUnit
  * @subpackage Framework
@@ -112,7 +112,7 @@ class PHPUnit_Framework_IncompleteTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Returns a string representation of the test case.
+     * Returns a string representation of the tests case.
      *
      * @return string
      */

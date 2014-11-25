@@ -201,7 +201,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the requirements for a test.
+     * Returns the requirements for a tests.
      *
      * @param  string $className
      * @param  string $methodName
@@ -245,7 +245,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the missing requirements for a test.
+     * Returns the missing requirements for a tests.
      *
      * @param  string $className
      * @param  string $methodName
@@ -297,7 +297,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the expected exception for a test.
+     * Returns the expected exception for a tests.
      *
      * @param  string $className
      * @param  string $methodName
@@ -503,7 +503,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the backup settings for a test.
+     * Returns the backup settings for a tests.
      *
      * @param  string $className
      * @param  string $methodName
@@ -527,7 +527,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the dependencies for a test class or method.
+     * Returns the dependencies for a tests class or method.
      *
      * @param  string $className
      * @param  string $methodName
@@ -558,7 +558,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the error handler settings for a test.
+     * Returns the error handler settings for a tests.
      *
      * @param  string  $className
      * @param  string  $methodName
@@ -575,7 +575,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the groups for a test class or method.
+     * Returns the groups for a tests class or method.
      *
      * @param  string $className
      * @param  string $methodName
@@ -625,7 +625,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the size of the test.
+     * Returns the size of the tests.
      *
      * @param  string  $className
      * @param  string  $methodName
@@ -653,7 +653,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the tickets for a test class or method.
+     * Returns the tickets for a tests class or method.
      *
      * @param  string $className
      * @param  string $methodName
@@ -681,7 +681,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the process isolation settings for a test.
+     * Returns the process isolation settings for a tests.
      *
      * @param  string  $className
      * @param  string  $methodName
@@ -704,7 +704,7 @@ class PHPUnit_Util_Test
     }
 
     /**
-     * Returns the preserve global state settings for a test.
+     * Returns the preserve global state settings for a tests.
      *
      * @param  string  $className
      * @param  string  $methodName

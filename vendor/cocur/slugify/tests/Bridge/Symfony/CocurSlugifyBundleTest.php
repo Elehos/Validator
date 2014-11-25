@@ -16,7 +16,7 @@ use Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle;
 /**
  * CocurSlugifyBundleTest
  *
- * @category   test
+ * @category   tests
  * @package    cocur/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
@@ -32,7 +32,7 @@ class CocurSlugifyBundleTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle::build()
      */
     public function build()

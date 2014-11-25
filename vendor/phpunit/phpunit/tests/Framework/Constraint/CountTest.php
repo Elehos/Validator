@@ -74,7 +74,7 @@ class CountTest extends PHPUnit_Framework_TestCase
     {
         $countConstraint = new PHPUnit_Framework_Constraint_Count(2);
 
-        // test with 1st implementation of Iterator
+        // tests with 1st implementation of Iterator
         $it = new TestIterator(array(1, 2));
 
         $countConstraint->evaluate($it, '', true);
@@ -88,7 +88,7 @@ class CountTest extends PHPUnit_Framework_TestCase
         $countConstraint->evaluate($it, '', true);
         $this->assertFalse($it->valid());
 
-        // test with 2nd implementation of Iterator
+        // tests with 2nd implementation of Iterator
         $it = new TestIterator2(array(1, 2));
 
         $countConstraint = new PHPUnit_Framework_Constraint_Count(2);

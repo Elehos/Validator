@@ -16,7 +16,7 @@ use Cocur\Slugify\Bridge\Silex\SlugifyServiceProvider;
 /**
  * SlugifyServiceProviderTest
  *
- * @category   test
+ * @category   tests
  * @package    cocur/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
@@ -35,7 +35,7 @@ class SlugifyServiceProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Silex\SlugifyServiceProvider::boot()
      */
     public function boot()
@@ -46,7 +46,7 @@ class SlugifyServiceProviderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Silex\SlugifyServiceProvider::register()
      */
     public function register()

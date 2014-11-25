@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a test test that unintentionally covers code.
+ * case of a tests tests that unintentionally covers code.
  *
  * @package    PHPUnit
  * @subpackage Framework

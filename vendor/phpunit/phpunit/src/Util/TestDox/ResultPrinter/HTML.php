@@ -84,7 +84,7 @@ class PHPUnit_Util_TestDox_ResultPrinter_HTML extends PHPUnit_Util_TestDox_Resul
     }
 
     /**
-     * Handler for 'on test' event.
+     * Handler for 'on tests' event.
      *
      * @param string  $name
      * @param boolean $success

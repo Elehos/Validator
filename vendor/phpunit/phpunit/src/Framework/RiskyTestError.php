@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a risky test.
+ * case of a risky tests.
  *
  * @package    PHPUnit
  * @subpackage Framework

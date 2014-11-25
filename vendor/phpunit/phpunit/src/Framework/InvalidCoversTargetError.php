@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of a test that is skipped because of an invalid @covers annotation.
+ * case of a tests that is skipped because of an invalid @covers annotation.
  *
  * @package    PHPUnit
  * @subpackage Framework

@@ -45,7 +45,7 @@
 
 /**
  * Extension to PHPUnit_Framework_AssertionFailedError to mark the special
- * case of an incomplete test.
+ * case of an incomplete tests.
  *
  * @package    PHPUnit
  * @subpackage Framework

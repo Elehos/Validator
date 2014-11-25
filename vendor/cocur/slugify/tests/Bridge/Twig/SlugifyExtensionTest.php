@@ -18,7 +18,7 @@ use \Mockery as m;
 /**
  * SlugifyExtensionTest
  *
- * @category   test
+ * @category   tests
  * @package    cocur/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
@@ -35,7 +35,7 @@ class SlugifyExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Twig\SlugifyExtension::getName()
      */
     public function getName($withDataSet = true)
@@ -44,7 +44,7 @@ class SlugifyExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Twig\SlugifyExtension::getFilters()
      */
     public function getFilters()
@@ -56,7 +56,7 @@ class SlugifyExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Twig\SlugifyExtension::slugifyFilter()
      */
     public function slugifyFilter()

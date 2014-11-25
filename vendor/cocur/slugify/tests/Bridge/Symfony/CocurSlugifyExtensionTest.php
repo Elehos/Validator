@@ -18,7 +18,7 @@ use \Mockery as m;
 /**
  * CocurSlugifyExtensionTest
  *
- * @category   test
+ * @category   tests
  * @package    cocur/slugify
  * @subpackage bridge
  * @author     Florian Eckerstorfer <florian@eckerstorfer.co>
@@ -34,7 +34,7 @@ class CocurSlugifyExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Bridge\Symfony\CocurSlugifyExtension::load()
      */
     public function load()

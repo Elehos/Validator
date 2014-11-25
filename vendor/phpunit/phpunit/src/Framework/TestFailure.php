@@ -44,7 +44,7 @@
  */
 
 /**
- * A TestFailure collects a failed test together with the caught exception.
+ * A TestFailure collects a failed tests together with the caught exception.
  *
  * @package    PHPUnit
  * @subpackage Framework
@@ -72,7 +72,7 @@ class PHPUnit_Framework_TestFailure
     protected $thrownException;
 
     /**
-     * Constructs a TestFailure with the given test and exception.
+     * Constructs a TestFailure with the given tests and exception.
      *
      * @param PHPUnit_Framework_Test $failedTest
      * @param Exception              $thrownException
@@ -146,7 +146,7 @@ class PHPUnit_Framework_TestFailure
     }
 
     /**
-     * Returns the name of the failing test (including data set, if any).
+     * Returns the name of the failing tests (including data set, if any).
      *
      * @return string
      * @since  Method available since Release 4.3.0
@@ -157,9 +157,9 @@ class PHPUnit_Framework_TestFailure
     }
 
     /**
-     * Returns the failing test.
+     * Returns the failing tests.
      *
-     * Note: The test object is not set when the test is executed in process
+     * Note: The tests object is not set when the tests is executed in process
      * isolation.
      *
      * @see PHPUnit_Framework_Exception

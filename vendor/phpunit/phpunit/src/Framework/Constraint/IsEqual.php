@@ -142,7 +142,7 @@ class PHPUnit_Framework_Constraint_IsEqual extends PHPUnit_Framework_Constraint
      * failure.
      *
      * @param  mixed                                        $other        Value or object to evaluate.
-     * @param  string                                       $description  Additional information about the test
+     * @param  string                                       $description  Additional information about the tests
      * @param  bool                                         $returnResult Whether to return a result or throw an exception
      * @return mixed
      * @throws PHPUnit_Framework_ExpectationFailedException

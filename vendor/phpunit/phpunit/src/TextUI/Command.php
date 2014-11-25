@@ -106,7 +106,7 @@ class PHPUnit_TextUI_Command
       'stop-on-skipped' => null,
       'report-useless-tests' => null,
       'strict-coverage' => null,
-      'disallow-test-output' => null,
+      'disallow-tests-output' => null,
       'enforce-time-limit' => null,
       'disallow-todo-tests' => null,
       'strict' => null,
@@ -114,7 +114,7 @@ class PHPUnit_TextUI_Command
       'testdox' => null,
       'testdox-html=' => null,
       'testdox-text=' => null,
-      'test-suffix=' => null,
+      'tests-suffix=' => null,
       'no-configuration' => null,
       'no-globals-backup' => null,
       'printer=' => null,
@@ -149,12 +149,12 @@ class PHPUnit_TextUI_Command
 
         $runner = $this->createRunner();
 
-        if (is_object($this->arguments['test']) &&
-            $this->arguments['test'] instanceof PHPUnit_Framework_Test) {
-            $suite = $this->arguments['test'];
+        if (is_object($this->arguments['tests']) &&
+            $this->arguments['tests'] instanceof PHPUnit_Framework_Test) {
+            $suite = $this->arguments['tests'];
         } else {
             $suite = $runner->getTest(
-                $this->arguments['test'],
+                $this->arguments['tests'],
                 $this->arguments['testFile'],
                 $this->arguments['testSuffixes']
             );
@@ -163,7 +163,7 @@ class PHPUnit_TextUI_Command
         if ($this->arguments['listGroups']) {
             $this->printVersionString();
 
-            print "Available test group(s):\n";
+            print "Available tests group(s):\n";
 
             $groups = $suite->getGroups();
             sort($groups);
@@ -179,7 +179,7 @@ class PHPUnit_TextUI_Command
             }
         }
 
-        unset($this->arguments['test']);
+        unset($this->arguments['tests']);
         unset($this->arguments['testFile']);
 
         try {
@@ -377,7 +377,7 @@ class PHPUnit_TextUI_Command
                     }
                 break;
 
-                case '--test-suffix': {
+                case '--tests-suffix': {
                     $this->arguments['testSuffixes'] = explode(
                         ',', $option[1]
                     );
@@ -516,7 +516,7 @@ class PHPUnit_TextUI_Command
                     }
                 break;
 
-                case '--disallow-test-output': {
+                case '--disallow-tests-output': {
                     $this->arguments['disallowTestOutput'] = true;
                     }
                 break;
@@ -564,9 +564,9 @@ class PHPUnit_TextUI_Command
 
         $this->handleCustomTestSuite();
 
-        if (!isset($this->arguments['test'])) {
+        if (!isset($this->arguments['tests'])) {
             if (isset($this->options[1][0])) {
-                $this->arguments['test'] = $this->options[1][0];
+                $this->arguments['tests'] = $this->options[1][0];
             }
 
             if (isset($this->options[1][1])) {
@@ -575,11 +575,11 @@ class PHPUnit_TextUI_Command
                 $this->arguments['testFile'] = '';
             }
 
-            if (isset($this->arguments['test']) &&
-                is_file($this->arguments['test']) &&
-                substr($this->arguments['test'], -5, 5) != '.phpt') {
-                $this->arguments['testFile'] = realpath($this->arguments['test']);
-                $this->arguments['test']     = substr($this->arguments['test'], 0, strrpos($this->arguments['test'], '.'));
+            if (isset($this->arguments['tests']) &&
+                is_file($this->arguments['tests']) &&
+                substr($this->arguments['tests'], -5, 5) != '.phpt') {
+                $this->arguments['testFile'] = realpath($this->arguments['tests']);
+                $this->arguments['tests']     = substr($this->arguments['tests'], 0, strrpos($this->arguments['tests'], '.'));
             }
         }
 
@@ -692,25 +692,25 @@ class PHPUnit_TextUI_Command
                 PHPUnit_Extensions_SeleniumTestCase::$browsers = $browsers;
             }
 
-            if (!isset($this->arguments['test'])) {
+            if (!isset($this->arguments['tests'])) {
                 $testSuite = $configuration->getTestSuiteConfiguration(isset($this->arguments['testsuite']) ? $this->arguments['testsuite'] : null);
 
                 if ($testSuite !== null) {
-                    $this->arguments['test'] = $testSuite;
+                    $this->arguments['tests'] = $testSuite;
                 }
             }
         } elseif (isset($this->arguments['bootstrap'])) {
             $this->handleBootstrap($this->arguments['bootstrap']);
         }
 
-        if (isset($this->arguments['test']) && is_string($this->arguments['test']) && substr($this->arguments['test'], -5, 5) == '.phpt') {
-            $test = new PHPUnit_Extensions_PhptTestCase($this->arguments['test']);
+        if (isset($this->arguments['tests']) && is_string($this->arguments['tests']) && substr($this->arguments['tests'], -5, 5) == '.phpt') {
+            $test = new PHPUnit_Extensions_PhptTestCase($this->arguments['tests']);
 
-            $this->arguments['test'] = new PHPUnit_Framework_TestSuite;
-            $this->arguments['test']->addTest($test);
+            $this->arguments['tests'] = new PHPUnit_Framework_TestSuite;
+            $this->arguments['tests']->addTest($test);
         }
 
-        if (!isset($this->arguments['test']) ||
+        if (!isset($this->arguments['tests']) ||
             (isset($this->arguments['testDatabaseLogRevision']) && !isset($this->arguments['testDatabaseDSN']))) {
             $this->showHelp();
             exit(PHPUnit_TextUI_TestRunner::EXCEPTION_EXIT);
@@ -909,9 +909,9 @@ Code Coverage Options:
 
 Logging Options:
 
-  --log-junit <file>        Log test execution in JUnit XML format to file.
-  --log-tap <file>          Log test execution in TAP format to file.
-  --log-json <file>         Log test execution in JSON format.
+  --log-junit <file>        Log tests execution in JUnit XML format to file.
+  --log-tap <file>          Log tests execution in TAP format to file.
+  --log-json <file>         Log tests execution in JSON format.
   --testdox-html <file>     Write agile documentation in HTML format to file.
   --testdox-text <file>     Write agile documentation in Text format to file.
 
@@ -921,37 +921,37 @@ Test Selection Options:
   --testsuite <pattern>     Filter which testsuite to run.
   --group ...               Only runs tests from the specified group(s).
   --exclude-group ...       Exclude tests from the specified group(s).
-  --list-groups             List available test groups.
-  --test-suffix ...         Only search for test in files with specified
+  --list-groups             List available tests groups.
+  --tests-suffix ...         Only search for tests in files with specified
                             suffix(es). Default: Test.php,.phpt
 
 Test Execution Options:
 
-  --report-useless-tests    Be strict about tests that do not test anything.
+  --report-useless-tests    Be strict about tests that do not tests anything.
   --strict-coverage         Be strict about unintentionally covered code.
-  --disallow-test-output    Be strict about output during tests.
-  --enforce-time-limit      Enforce time limit based on test size.
+  --disallow-tests-output    Be strict about output during tests.
+  --enforce-time-limit      Enforce time limit based on tests size.
   --disallow-todo-tests     Disallow @todo-annotated tests.
   --strict                  Run tests in strict mode (enables all of the above).
 
-  --process-isolation       Run each test in a separate PHP process.
-  --no-globals-backup       Do not backup and restore \$GLOBALS for each test.
-  --static-backup           Backup and restore static attributes for each test.
+  --process-isolation       Run each tests in a separate PHP process.
+  --no-globals-backup       Do not backup and restore \$GLOBALS for each tests.
+  --static-backup           Backup and restore static attributes for each tests.
 
   --colors                  Use colors in output.
   --stderr                  Write to STDERR instead of STDOUT.
   --stop-on-error           Stop execution upon first error.
   --stop-on-failure         Stop execution upon first error or failure.
-  --stop-on-risky           Stop execution upon first risky test.
-  --stop-on-skipped         Stop execution upon first skipped test.
-  --stop-on-incomplete      Stop execution upon first incomplete test.
+  --stop-on-risky           Stop execution upon first risky tests.
+  --stop-on-skipped         Stop execution upon first skipped tests.
+  --stop-on-incomplete      Stop execution upon first incomplete tests.
   -v|--verbose              Output more verbose information.
-  --debug                   Display debugging information during test execution.
+  --debug                   Display debugging information during tests execution.
 
   --loader <loader>         TestSuiteLoader implementation to use.
-  --repeat <times>          Runs the test(s) repeatedly.
-  --tap                     Report test execution progress in TAP format.
-  --testdox                 Report test execution progress in TestDox format.
+  --repeat <times>          Runs the tests(s) repeatedly.
+  --tap                     Report tests execution progress in TAP format.
+  --testdox                 Report tests execution progress in TestDox format.
   --printer <printer>       TestListener implementation to use.
 
 Configuration Options:
@@ -975,7 +975,7 @@ EOT;
     }
 
     /**
-     * Custom callback for test suite discovery.
+     * Custom callback for tests suite discovery.
      */
     protected function handleCustomTestSuite()
     {

@@ -220,7 +220,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * Returns the test data.
+     * Returns the tests data.
      *
      * @return array
      * @since  Method available since Release 1.1.0
@@ -231,7 +231,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * Sets the test data.
+     * Sets the tests data.
      *
      * @param array $tests
      * @since Method available since Release 2.0.0

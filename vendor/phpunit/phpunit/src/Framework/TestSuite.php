@@ -44,9 +44,9 @@
  */
 
 /**
- * A TestSuite is a composite of Tests. It runs a collection of test cases.
+ * A TestSuite is a composite of Tests. It runs a collection of tests cases.
  *
- * Here is an example using the dynamic test definition.
+ * Here is an example using the dynamic tests definition.
  *
  * <code>
  * <?php
@@ -69,7 +69,7 @@
  * </code>
  *
  * This constructor creates a suite with all the methods starting with
- * "test" that take no arguments.
+ * "tests" that take no arguments.
  *
  * @package    PHPUnit
  * @subpackage Framework
@@ -101,28 +101,28 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     protected $runTestInSeparateProcess = false;
 
     /**
-     * The name of the test suite.
+     * The name of the tests suite.
      *
      * @var string
      */
     protected $name = '';
 
     /**
-     * The test groups of the test suite.
+     * The tests groups of the tests suite.
      *
      * @var array
      */
     protected $groups = array();
 
     /**
-     * The tests in the test suite.
+     * The tests in the tests suite.
      *
      * @var array
      */
     protected $tests = array();
 
     /**
-     * The number of tests in the test suite.
+     * The number of tests in the tests suite.
      *
      * @var integer
      */
@@ -238,7 +238,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Returns a string representation of the test suite.
+     * Returns a string representation of the tests suite.
      *
      * @return string
      */
@@ -248,7 +248,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Adds a test to the suite.
+     * Adds a tests to the suite.
      *
      * @param PHPUnit_Framework_Test $test
      * @param array                  $groups
@@ -334,7 +334,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
      *
      * If the named file cannot be read or there are no new tests that can be
      * added, a <code>PHPUnit_Framework_Warning</code> will be created instead,
-     * leaving the current test run untouched.
+     * leaving the current tests run untouched.
      *
      * @param  string                      $filename
      * @param  array                       $phptOptions Array with ini settings for the php instance
@@ -358,23 +358,23 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
         }
 
         // The given file may contain further stub classes in addition to the
-        // test class itself. Figure out the actual test class.
+        // tests class itself. Figure out the actual tests class.
         $classes    = get_declared_classes();
         $filename   = PHPUnit_Util_Fileloader::checkAndLoad($filename);
         $newClasses = array_diff(get_declared_classes(), $classes);
 
-        // The diff is empty in case a parent class (with test methods) is added
+        // The diff is empty in case a parent class (with tests methods) is added
         // AFTER a child class that inherited from it. To account for that case,
         // cumulate all discovered classes, so the parent class may be found in
         // a later invocation.
         if ($newClasses) {
-            // On the assumption that test classes are defined first in files,
+            // On the assumption that tests classes are defined first in files,
             // process discovered classes in approximate LIFO order, so as to
             // avoid unnecessary reflection.
             $this->foundClasses = array_merge($newClasses, $this->foundClasses);
         }
 
-        // The test class's name must match the filename, either in full, or as
+        // The tests class's name must match the filename, either in full, or as
         // a PEAR/PSR-0 prefixed shortname ('NameSpace_ShortName'), or as a
         // PSR-1 local shortname ('NameSpace\ShortName'). The comparison must be
         // anchored to prevent false-positive matches (e.g., 'OtherShortName').
@@ -415,7 +415,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Wrapper for addTestFile() that adds multiple test files.
+     * Wrapper for addTestFile() that adds multiple tests files.
      *
      * @param  array|Iterator              $filenames
      * @throws PHPUnit_Framework_Exception
@@ -437,7 +437,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Counts the number of test cases that will be run by this test.
+     * Counts the number of tests cases that will be run by this tests.
      *
      * @return integer
      */
@@ -599,7 +599,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
         }
 
         if (!isset($test)) {
-            throw new PHPUnit_Framework_Exception('No valid test provided.');
+            throw new PHPUnit_Framework_Exception('No valid tests provided.');
         }
 
         if ($test instanceof PHPUnit_Framework_TestCase) {
@@ -648,7 +648,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Returns the test groups of the suite.
+     * Returns the tests groups of the suite.
      *
      * @return array
      * @since  Method available since Release 3.2.0
@@ -664,7 +664,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Set tests groups of the test case
+     * Set tests groups of the tests case
      *
      * @param array $groups
      * @since Method available since Release 4.0.0
@@ -779,7 +779,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Runs a test.
+     * Runs a tests.
      *
      * @deprecated
      * @param PHPUnit_Framework_Test       $test
@@ -801,7 +801,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Returns the test at the given index.
+     * Returns the tests at the given index.
      *
      * @param  integer
      * @return PHPUnit_Framework_Test
@@ -826,7 +826,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Set tests of the test suite
+     * Set tests of the tests suite
      *
      * @param array $tests
      * @since Method available since Release 4.0.0
@@ -837,7 +837,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Mark the test suite as skipped.
+     * Mark the tests suite as skipped.
      *
      * @param  string                                  $message
      * @throws PHPUnit_Framework_SkippedTestSuiteError
@@ -864,7 +864,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
             $this->addTest(
                 self::warning(
                     sprintf(
-                        'Test method "%s" in test class "%s" is not public.',
+                        'Test method "%s" in tests class "%s" is not public.',
                         $name,
                         $class->getName()
                     )
@@ -895,15 +895,15 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
      */
     public static function isTestMethod(ReflectionMethod $method)
     {
-        if (strpos($method->name, 'test') === 0) {
+        if (strpos($method->name, 'tests') === 0) {
             return true;
         }
 
         // @scenario on TestCase::testMethod()
-        // @test     on TestCase::testMethod()
+        // @tests     on TestCase::testMethod()
         $doc_comment = $method->getDocComment();
 
-        return strpos($doc_comment, '@test')     !== false ||
+        return strpos($doc_comment, '@tests')     !== false ||
                strpos($doc_comment, '@scenario') !== false;
     }
 
@@ -964,7 +964,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
     }
 
     /**
-     * Returns an iterator for this test suite.
+     * Returns an iterator for this tests suite.
      *
      * @return RecursiveIteratorIterator
      * @since  Method available since Release 3.1.0
@@ -992,7 +992,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
 
     /**
      * Template Method that is called before the tests
-     * of this test suite are run.
+     * of this tests suite are run.
      *
      * @since  Method available since Release 3.1.0
      */
@@ -1002,7 +1002,7 @@ class PHPUnit_Framework_TestSuite implements PHPUnit_Framework_Test, PHPUnit_Fra
 
     /**
      * Template Method that is called after the tests
-     * of this test suite have finished running.
+     * of this tests suite have finished running.
      *
      * @since  Method available since Release 3.1.0
      */

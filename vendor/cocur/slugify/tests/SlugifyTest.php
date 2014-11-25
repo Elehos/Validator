@@ -16,7 +16,7 @@ use Cocur\Slugify\Slugify;
 /**
  * SlugifyTest
  *
- * @category  test
+ * @category  tests
  * @package   org.cocur.slugify
  * @author    Florian Eckerstorfer <florian@eckerstorfer.co>
  * @author    Ivo Bathke <ivo.bathke@gmail.com>
@@ -34,7 +34,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @dataProvider provider
      * @covers Cocur\Slugify\Slugify::slugify()
      */
@@ -44,7 +44,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::addRule()
      * @covers Cocur\Slugify\Slugify::slugify()
      */
@@ -55,7 +55,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::addRules()
      * @covers Cocur\Slugify\Slugify::slugify()
      */
@@ -66,7 +66,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::activateRuleset()
      */
     public function activateRulesetActivatesTheGivenRuleset()
@@ -80,7 +80,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::activateRuleset()
      * @expectedException \InvalidArgumentException
      */
@@ -90,7 +90,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers  Cocur\Slugify\Slugify::addRuleset()
      * @covers  Cocur\Slugify\Slugify::getRulesets()
      */
@@ -102,7 +102,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::create()
      */
     public function createReturnsAnInstance()
@@ -111,7 +111,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::setRegExp()
      */
     public function otherRegExpsProduceOtherResults()
@@ -125,7 +125,7 @@ class SlugifyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
+     * @tests
      * @covers Cocur\Slugify\Slugify::__construct()
      */
     public function constructWithOtherRegexp()

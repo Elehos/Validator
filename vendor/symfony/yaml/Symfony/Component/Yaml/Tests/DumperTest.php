@@ -97,7 +97,7 @@ EOF;
                 } else {
                     eval('$expected = '.trim($test['php']).';');
 
-                    $this->assertEquals($expected, $this->parser->parse($this->dumper->dump($expected, 10)), $test['test']);
+                    $this->assertEquals($expected, $this->parser->parse($this->dumper->dump($expected, 10)), $test['tests']);
                 }
             }
         }

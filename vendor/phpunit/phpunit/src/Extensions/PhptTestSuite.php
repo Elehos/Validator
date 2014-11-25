@@ -44,7 +44,7 @@
  */
 
 /**
- * Suite for .phpt test cases.
+ * Suite for .phpt tests cases.
  *
  * @package    PHPUnit
  * @subpackage Extensions_PhptTestCase
@@ -57,7 +57,7 @@
 class PHPUnit_Extensions_PhptTestSuite extends PHPUnit_Framework_TestSuite
 {
     /**
-     * Constructs a new TestSuite for .phpt test cases.
+     * Constructs a new TestSuite for .phpt tests cases.
      *
      * @param  string                      $directory
      * @param  array                       $options   Array with ini settings for the php instance run,
