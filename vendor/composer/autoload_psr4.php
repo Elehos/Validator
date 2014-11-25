@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Web1\\Validator\\' => array($baseDir . '/src'),
-    'TestsWeb1\\Validator\\' => array($baseDir . '/tests'),
+    'Tests\\Web1\\Validator\\' => array($baseDir . '/tests'),
     'Cocur\\Slugify\\' => array($vendorDir . '/cocur/slugify/src'),
 );

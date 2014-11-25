@@ -9,7 +9,7 @@
     "autoload": {
         "psr-4": {
             "Web1\\Validator\\": "src",
-            "TestsWeb1\\Validator\\": "tests"
+            "Tests\\Web1\\Validator\\": "tests"
         }
     },
     "config": {
