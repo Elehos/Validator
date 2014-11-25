@@ -12,7 +12,7 @@
          bootstrap="./vendor/autoload.php"
         >
     <testsuites>
-        <testsuite name="Web1 String Generator Test Suite">
+        <testsuite name="Web1 Validator Test">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

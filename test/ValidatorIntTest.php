@@ -12,10 +12,11 @@ use Web1\Validator\ValidatorInt;
 
 class ValidatorIntTest extends \PHPUnit_Framework_TestCase
 {
-    public function testIntEqual($a,$b)
+    public function testIntEqual()
     {
-        $test = ValidatorInt::intEqual($a,$b);
-        $this->assertEquals($a,$b,$test);
+        $a = mt_rand(1, 100);
+        $test = ValidatorInt::intEqual($a,$a);
+        $this->assertTrue($a,$test);
     }
 
     public function testIntInf($a,$b)
