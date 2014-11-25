@@ -23,5 +23,6 @@ class ValidatorIntTest extends \PHPUnit_Framework_TestCase
     {
         $test = ValidatorInt::intInf($a,$b);
         $this->assertEquals($a,$b,$test);
+
     }
 } 
