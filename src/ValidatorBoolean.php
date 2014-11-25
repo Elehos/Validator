@@ -10,7 +10,10 @@ namespace Web1\Validator;
 
 class ValidatorBoolean
 {
-
+    /**
+     * @param $boolean
+     * @return bool
+     */
  public static function validatorBoolean($boolean)
  {
      return $boolean === true;

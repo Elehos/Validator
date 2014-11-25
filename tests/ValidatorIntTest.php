@@ -12,6 +12,7 @@ use Web1\Validator\ValidatorInt;
 
 class ValidatorIntTest extends \PHPUnit_Framework_TestCase
 {
+
     public function testIntEqual()
     {
         $a = mt_rand(1, 100);
@@ -19,10 +20,11 @@ class ValidatorIntTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($test);
     }
 
-    public function testIntInf($a,$b)
+    public function testIntInf()
     {
+        $a = mt_rand(1, 49);
+        $b = mt_rand(50, 100);
         $test = ValidatorInt::intInf($a,$b);
         $this->assertTrue($test);
-
     }
 } 
