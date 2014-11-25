@@ -24,26 +24,14 @@ class ValidatorInt
     }
     public static function intBetween ($number,$value1,$value2)
     {
-        if ($number >= $value1 && $number <= $value2){
-            return true;
-        } else{
-            return false;
-        }
+       return $number >= $value1 && $number <= $value2;
     }
     public static function intNegative ($negative)
     {
-        if ($negative <= 0){
-            return true;
-        } else{
-            return false;
-        }
+        return $negative <= 0;
     }
     public static function intPositive ($positive)
     {
-        if ($positive >= 0){
-            return true;
-        } else{
-            return false;
-        }
+        return $positive >= 0;
     }
 } 

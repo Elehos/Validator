@@ -12,42 +12,22 @@ class ValidatorString
 {
     public static function stringLenEqual ($value,$string)
     {
-        if ($value == mb_strlen($string)){
-            return true;
-        } else{
-            return false;
-        }
+        return $value == mb_strlen($string);
     }
     public static function stringLenInf ($value,$string)
     {
-        if ($value > mb_strlen($string)) {
-            return true;
-        } else {
-            return false;
-        }
+        return $value > mb_strlen($string);
     }
     public static function stringLenSup ($value,$string)
     {
-        if ($value < mb_strlen($string)){
-            return true;
-        } else{
-            return false;
-        }
+        return $value < mb_strlen($string);
     }
     public static function stringLenBetween ($string, $value1,$value2)
     {
-        if (mb_strlen($string) >= $value1 && mb_strlen($string) <= $value2){
-            return true;
-        } else{
-            return false;
-        }
+        return mb_strlen($string) >= $value1 && mb_strlen($string) <= $value2;
     }
     public static function stringNoSpaceStartEnd ($string)
     {
-        if (strrpos($string, ' ', 0) == false && strrpos($string, ' ', mb_strlen($string)+1) == false){
-            return true;
-        } else {
-            return false;
-        }
+        return strrpos($string, ' ', 0) === false && strrpos($string, ' ', mb_strlen($string) + 1) == false;
     }
 }
