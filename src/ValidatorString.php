@@ -12,7 +12,7 @@ class ValidatorString
 {
     public static function stringLenEqual ($value,$string)
     {
-        if ($value == strlen($string)){
+        if ($value == mb_strlen($string)){
             return true;
         } else{
             return false;
@@ -20,7 +20,7 @@ class ValidatorString
     }
     public static function stringLenInf ($value,$string)
     {
-        if ($value > strlen($string)) {
+        if ($value > mb_strlen($string)) {
             return true;
         } else {
             return false;
@@ -28,7 +28,7 @@ class ValidatorString
     }
     public static function stringLenSup ($value,$string)
     {
-        if ($value < strlen($string)){
+        if ($value < mb_strlen($string)){
             return true;
         } else{
             return false;
@@ -36,7 +36,7 @@ class ValidatorString
     }
     public static function stringLenBetween ($string, $value1,$value2)
     {
-        if (strlen($string) >= $value1 && strlen($string) <= $value2){
+        if (mb_strlen($string) >= $value1 && mb_strlen($string) <= $value2){
             return true;
         } else{
             return false;
@@ -44,7 +44,7 @@ class ValidatorString
     }
     public static function stringNoSpaceStartEnd ($string)
     {
-        if (strrpos($string, ' ', 0) == false && strrpos($string, ' ', strlen($string)+1) == false){
+        if (strrpos($string, ' ', 0) == false && strrpos($string, ' ', mb_strlen($string)+1) == false){
             return true;
         } else {
             return false;
