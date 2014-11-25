@@ -12,27 +12,15 @@ class ValidatorInt
 {
     public static function intEqual ($a,$b)
     {
-        if ($a == $b){
-            return true;
-        } else{
-            return false;
-        }
+        return $a == $b;
     }
     public static function intInf ($a,$b)
     {
-        if ($a < $b) {
-            return true;
-        } else {
-            return false;
-        }
+        return $a < $b;
     }
     public static function intSup ($a,$b)
     {
-        if ($a > $b){
-            return true;
-        } else{
-            return false;
-        }
+        return $a > $b;
     }
     public static function intBetween ($number,$value1,$value2)
     {

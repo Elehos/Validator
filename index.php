@@ -8,7 +8,7 @@ echo \Web1\Validator\ValidatorBoolean::validatorBoolean(true);
 //Validator Integer
 echo \Web1\Validator\ValidatorInt::intEqual(5,5); //Equal
 
-echo \Web1\Validator\ValidatorInt::intInf(5,6); //Inférieur
+/*echo \Web1\Validator\ValidatorInt::intInf(5,6); //Inférieur
 
 echo \Web1\Validator\ValidatorInt::intSup(10,4); //Supérieur
 
@@ -27,4 +27,4 @@ echo \Web1\Validator\ValidatorString::stringLenSup(3,"hello");
 
 echo \Web1\Validator\ValidatorString::stringLenBetween("hello",1,100);
 
-echo \Web1\Validator\ValidatorString::stringNoSpaceStartEnd(" hello ");
+echo \Web1\Validator\ValidatorString::stringNoSpaceStartEnd(" hello ");*/

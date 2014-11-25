@@ -13,10 +13,10 @@ class ValidatorBoolean
 
  public static function validatorBoolean($boolean)
  {
-     if ($boolean == true) {
+     if ($boolean === true) {
          return true;
      } else{
          return false;
      }
  }
-} 
+}
