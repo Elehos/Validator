@@ -34,4 +34,4 @@ class ValidatorInt
     {
         return $positive >= 0;
     }
-} 
+}

@@ -12,7 +12,8 @@ use Web1\Validator\ValidatorBoolean;
 
 class ValidatorBooleanTest extends \PHPUnit_Framework_TestCase
 {
-    public function testValidatorBoolean() {
+    public function testValidatorBoolean()
+    {
         $boolean = true;
         $test = ValidatorBoolean::validatorBoolean($boolean);
         $this->assertEquals($boolean,$test);

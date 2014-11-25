@@ -1,0 +1,26 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Florian
+ * Date: 25/11/2014
+ * Time: 10:40
+ */
+
+namespace tests\Web1\Validator;
+
+use Web1\Validator\ValidatorInt;
+
+class ValidatorIntTest extends \PHPUnit_Framework_TestCase
+{
+    public function testIntEqual($a,$b)
+    {
+        $test = ValidatorInt::intEqual($a,$b);
+        $this->assertEquals($a,$b,$test);
+    }
+
+    public function testIntInf($a,$b)
+    {
+        $test = ValidatorInt::intInf($a,$b);
+        $this->assertEquals($a,$b,$test);
+    }
+} 
